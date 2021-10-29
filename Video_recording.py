@@ -9,6 +9,7 @@ def recording_video():
     fourcc = cv2.VideoWriter_fourcc(*"XVID")
     # create the video write object
     out = cv2.VideoWriter("output.avi", fourcc, 20.0, (SCREEN_SIZE))
+    count_seconds = 0
     while True:
         # make a screenshot
         img = pyautogui.screenshot()
@@ -21,7 +22,8 @@ def recording_video():
         # show the frame
         cv2.imshow("screenshot", frame)
         # if the user clicks q, it exits
-        if cv2.waitKey(1) == ord("q"):
+        count_seconds += 1
+        if count_seconds == 200:
             break
 
     # make sure everything is closed when exited
