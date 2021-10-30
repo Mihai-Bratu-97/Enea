@@ -28,7 +28,7 @@ def starting_audio(stream, chunk, record_seconds, sample_rate):
     return frames
 
 def end_audio(stream, filename, channels, frames, sample_rate, FORMAT, p):
-    print("Audio recording finishing!")
+    print("Finishing audio recording!")
     # stop and close stream
     stream.stop_stream()
     stream.close()
