@@ -40,7 +40,7 @@ def end_recording(out):
     cv2.destroyAllWindows()
     out.release()
 
-def start_video_recording():
+def video_recording_script():
     frame_per_second = 15
     minutes_in_seconds = 10
     resolution = screen(1920, 1080)
