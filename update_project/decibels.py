@@ -24,7 +24,7 @@ def writing_number_of_dbs(lvl_of_dbs):
     f.write("The level of db is: " + str(lvl_of_dbs) + '\n') # I wrote the number of db in that file
     f.close() # I closed the file
 
-def get_dbs():
+def dbs_script():
     data_list = initialise_data("recorded.wav")
     rms = rms_calcul(data_list)
     dbs = dbs_calcul(rms)
