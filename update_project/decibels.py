@@ -20,8 +20,8 @@ def dbs_calcul(root):
     return lvl_of_dbs
 
 def writing_number_of_dbs(lvl_of_dbs):
-    f = open("level_of_db.txt", "a") # I opened a text file, whose name is level_of_db.txt
-    f.write("The level of db is: " + str(lvl_of_dbs) + '\n') # I wrote the number of db in that file
+    f = open("level_of_dbs.txt", "a") # I opened a text file, whose name is level_of_db.txt
+    f.write("The level of dbs is: " + str(lvl_of_dbs) + '\n') # I wrote the number of db in that file
     f.close() # I closed the file
 
 def dbs_script():
