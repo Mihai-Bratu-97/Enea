@@ -22,7 +22,7 @@ class YoutubeScript:
         self.ads()
         self.checking_youtube_premium()
 
-    def checking_internet(self):
+    def test_internet(self):
         try:
             socket.create_connection(("youtube.com", 80))
             return True
@@ -39,7 +39,7 @@ class YoutubeScript:
 
     def open_site(self):
         self.chrome.maximize_window()
-        while not self.checking_internet():
+        while not self.test_internet():
             try:
                 self.chrome.get("https://www.youtube.com/")
             except:
@@ -56,7 +56,7 @@ class YoutubeScript:
             return None
 
     def youtube_searching_bar(self):
-        while not self.checking_internet():
+        while not self.test_internet():
             continue
         try:
             self.wait.until(EC.element_to_be_clickable((By.XPATH, '//div[@id="search-input"]'))).click()
@@ -66,7 +66,7 @@ class YoutubeScript:
             return None
 
     def random_clip(self):
-        while not self.checking_internet():
+        while not self.test_internet():
             continue
         try:
             self.wait.until(EC.visibility_of_all_elements_located((By.XPATH, '//a[@id="video-title"]')))
@@ -83,7 +83,7 @@ class YoutubeScript:
 
     def open_random_clip(self):
         try:
-            while not self.checking_internet():
+            while not self.test_internet():
                 self.chrome.get(self.random_clip())
             self.chrome.get(self.random_clip())
         except:
@@ -98,7 +98,7 @@ class YoutubeScript:
             return None
 
     def ads(self):
-        while not self.checking_internet():
+        while not self.test_internet():
             continue
         try:
             self.wait.until(EC.presence_of_element_located((By.XPATH, '/html/body/ytd-app/div/ytd-page-manager/ytd-watch-flexy/div[5]/div[1]/div/div[1]/div/div/div/ytd-player/div/div/div[4]/div/div[3]/div/div[2]/span/button/div')))
@@ -110,7 +110,7 @@ class YoutubeScript:
 
 
     def checking_youtube_premium(self):
-        while not self.checking_internet():
+        while not self.test_internet():
             continue
         try:
             self.wait.until(EC.presence_of_element_located((By.XPATH, "/html/body/ytd-app/ytd-popup-container/tp-yt-paper-dialog/ytd-mealbar-promo-renderer/div/div[2]/ytd-button-renderer[1]/a/tp-yt-paper-button/yt-formatted-string")))
