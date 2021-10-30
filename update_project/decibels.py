@@ -5,7 +5,7 @@ def initialise_data(wav):
     samplerate, data = wavfile.read(wav) # I extracted samplerate and data from audio file
     return data
 
-def rms_calcul(data):
+def rms_calcul(data): # I calculated the rms basing on a math formula
     square = 0
     n = len(data)
     for i in range(0, n):
@@ -20,7 +20,7 @@ def dbs_calcul(root):
     return lvl_of_dbs
 
 def writing_number_of_dbs(lvl_of_dbs):
-    f = open("level_of_dbs.txt", "a") # I opened a text file, whose name is level_of_db.txt
+    f = open("level_of_dbs.txt", "a") # I opened a text file, whose name is level_of_dbs.txt
     f.write("The level of dbs is: " + str(lvl_of_dbs) + '\n') # I wrote the number of db in that file
     f.close() # I closed the file
 
