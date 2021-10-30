@@ -61,4 +61,4 @@ def audio_recording_script():
         audio = starting_audio(preparing2, chunk, record_seconds, sample_rate)
         end_audio(preparing2, filename, channels, audio, sample_rate, FORMAT, preparing1)
     except:
-        print("There is no input or output")
+        print("There is no microphone detected!")
