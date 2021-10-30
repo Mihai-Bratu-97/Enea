@@ -52,7 +52,7 @@ def audio_recording_script():
     filename = "recorded.wav"
     chunk = 1024
     FORMAT = pyaudio.paInt16
-    channels = 2
+    channels = 1
     sample_rate = 44100
     record_seconds = 10
     try:
