@@ -16,7 +16,7 @@ def rms_calcul(data):
 
 def dbs_calcul(root):
     lvl_of_dbs = 20 * math.log10(root) # I computed the number of decibels using another math formula
-    print("The level of dbs has succesfully computed")
+    print("The level of dbs has been successfully computed")
     return lvl_of_dbs
 
 def writing_number_of_dbs(lvl_of_dbs):
