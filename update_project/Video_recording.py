@@ -17,7 +17,7 @@ def output(fps, screen_size ):
 def start_recording(seconds, fps, outting):
     final_seconds = seconds * fps
     count_seconds = 0
-    print("The recording has started")
+    print("The video recording has started")
     while True:
         # make a screenshot
         img = pyautogui.screenshot()
@@ -29,10 +29,10 @@ def start_recording(seconds, fps, outting):
         outting.write(frame)
         # if the user clicks q, it exits
         if count_seconds % fps == 0:
-            print("Recording...")
+            print("Recording video...")
         count_seconds += 1
         if count_seconds == final_seconds:
-            print("The recording has finished")
+            print("The video recording has finished!")
             break
 
 def end_recording(out):
