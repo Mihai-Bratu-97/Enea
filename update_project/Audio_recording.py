@@ -54,7 +54,7 @@ def audio_recording_script():
     FORMAT = pyaudio.paInt16
     channels = 1
     sample_rate = 44100
-    record_seconds = 120
+    record_seconds = 121
     try:
         preparing1 = preparing_audio_recording1()
         preparing2 = preparing_audio_recording2(FORMAT, channels, sample_rate, chunk)
