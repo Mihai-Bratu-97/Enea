@@ -42,7 +42,7 @@ def end_recording(out):
 
 def video_recording_script():
     frame_per_second = 15
-    minutes_in_seconds = 10
+    minutes_in_seconds = 120
     resolution = screen(1920, 1080)
     fourcc()
     out_put = output(frame_per_second, resolution)
