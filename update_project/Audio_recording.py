@@ -17,14 +17,18 @@ def preparing_audio_recording2(FORMAT, channels, sample_rate, chunk):
 
 def starting_audio(stream, chunk, record_seconds, sample_rate):
     frames = []
+    count = 0
     print("Starting audio recording")
     for i in range(int(sample_rate / chunk * record_seconds)):
         data = stream.read(chunk)
         frames.append(data)
-        print("Recording audio...")
+        count += 1
+        if count % 43 == 0:
+            print("Recording audio...")
     return frames
 
 def end_audio(stream, filename, channels, frames, sample_rate, FORMAT, p):
+    print("Audio recording finishing!")
     # stop and close stream
     stream.stop_stream()
     stream.close()
