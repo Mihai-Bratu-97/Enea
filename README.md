@@ -40,7 +40,6 @@ To verify if pip was installed, follow the given steps:
 ```
 Open the command prompt.
 Enter pip –V to check if pip was installed.
-The following output appears if pip is installed successfully.
 ```
 
 ## INSTALL PYCHARM:
