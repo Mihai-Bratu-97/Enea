@@ -8,7 +8,7 @@ class AudioScript:
         self.FORMAT = pyaudio.paInt16 # sample format
         self.channels = 1 # mono
         self.sample_rate = 44100 # 44100 samples per second
-        self.record_seconds = 11
+        self.record_seconds = 121
         self.starting_recording(self.record_seconds)
 
     # this function starts the recording
