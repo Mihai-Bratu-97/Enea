@@ -4,7 +4,7 @@ from Audio_recording import AudioScript
 from decibels import DbsScript
 from threading import Thread
 
-def main():
+if __name__ == "__main__":
     youtube = Thread(target=YoutubeScript)
     video = Thread(target=VideoScript)
     audio = Thread(target=AudioScript)
@@ -16,5 +16,3 @@ def main():
     video.join()
     audio.join()
     decibels.start()
-
-main()
