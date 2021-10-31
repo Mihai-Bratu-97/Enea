@@ -23,14 +23,14 @@ class AudioScript:
                             frames_per_buffer=self.chunk) # open stream object as input & output
             frames = []
             count = 0
-            print("Starting audio recording")
+            print("Starts audio recording")
             for i in range(int(44100 / self.chunk * record_seconds)):
                 if count % 43 == 0:
                     print("Audio recording...")
                 count += 1
                 data = stream.read(self.chunk)
                 frames.append(data)
-            print("Finishing audio recording!")
+            print("Audio recording has finished!")
             # stop and close stream
             stream.stop_stream()
             stream.close()
