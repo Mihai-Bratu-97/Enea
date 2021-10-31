@@ -46,11 +46,17 @@ The following output appears if pip is installed successfully.
 ## INSTALL PYCHARM:
 Here is a step by step process on how to download and install Pycharm IDE on Windows:
 STEP 1) To download PyCharm visit the website https://www.jetbrains.com/pycharm/download/ and Click the “DOWNLOAD” link under the Community Section.
+
 STEP 2) Once the download is complete, run the exe for install PyCharm. The setup wizard should have started. Click “Next”.
+
 STEP 3) On the next screen, Change the installation path if required. Click “Next”.
+
 STEP 4) On the next screen, you can create a desktop shortcut if you want and click on “Next”.
+
 STEP 5) Choose the start menu folder. Keep selected JetBrains and click on “Install”.
+
 STEP 6) Wait for the installation to finish.
+
 STEP 7) Once installation finished, you should receive a message screen that PyCharm is installed. If you want to go ahead and run it, click the “Run PyCharm Community Edition” box first and click “Finish”.
 
 ## INSTALL SELENIUM
