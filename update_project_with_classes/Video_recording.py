@@ -11,7 +11,7 @@ class VideoScript:
 
     #this function starts to recording
     def starting_video_recording(self):
-        print("Start video recording")
+        print("Starts video recording")
         count_seconds = 0
         while True:
             img = pyautogui.screenshot() # make a screenshot
@@ -21,8 +21,8 @@ class VideoScript:
             count_seconds += 1
             if count_seconds % 17 == 0:
                 print("Video recording...")
-            if count_seconds == 170: # 2400
-                print("Finish Video recording!")
+            if count_seconds == 2040: 
+                print("Video recording has finished!")
                 break
         self.end_Recording()
 
