@@ -3,23 +3,24 @@ import wave
 
 class AudioScript:
     def __init__(self):
-        self.filename = "recorded.wav"
-        self.chunk = 1024
-        self.FORMAT = pyaudio.paInt16
-        self.channels = 1
-        self.sample_rate = 44100
-        self.record_seconds = 11 # 120
+        self.filename = "recorded.wav" # the name of the file
+        self.chunk = 1024 # set the chunk size of 1024 samples
+        self.FORMAT = pyaudio.paInt16 # sample format
+        self.channels = 1 # mono
+        self.sample_rate = 44100 # 44100 samples per second
+        self.record_seconds = 11
         self.starting_recording(self.record_seconds)
 
+    # this function starts the recording
     def starting_recording(self, record_seconds):
         try:
-            p = pyaudio.PyAudio()
+            p = pyaudio.PyAudio() # initialize PyAudio object
             stream = p.open(format=self.FORMAT,
                             channels=self.channels,
                             rate=self.sample_rate,
                             input=True,
                             output=True,
-                            frames_per_buffer=self.chunk)
+                            frames_per_buffer=self.chunk) # open stream object as input & output
             frames = []
             count = 0
             print("Starting audio recording")
@@ -29,12 +30,14 @@ class AudioScript:
                 count += 1
                 data = stream.read(self.chunk)
                 frames.append(data)
-
-            # stop and close stream
             print("Finishing audio recording!")
+            # stop and close stream
             stream.stop_stream()
             stream.close()
+            # terminate pyaudio object
             p.terminate()
+            # save audio file
+            # open the file in 'write bytes' mode
             wf = wave.open(self.filename, "wb")
             # set the channels
             wf.setnchannels(self.channels)
@@ -47,5 +50,4 @@ class AudioScript:
             # close the file
             wf.close()
         except:
-            print("No microphone detected!")
-            return None
+            print("No microphone detected! Check it and run the script again!")
