@@ -2,9 +2,12 @@ from scipy.io import wavfile
 import math
 
 class DbsScript:
-    def __init__(self, wav):
-        self.samplerate, self.data = wavfile.read(wav) # extracts the samplerate(44100), and the data, as a list with numbers
-        self.written_file()
+        def __init__(self, wav):
+        try:
+            self.samplerate, self.data = wavfile.read(wav) # extracts the samplerate(44100), and the data, as a list with numbers
+            self.written_file()
+        except:
+            print("No audio file found! So the number of dbs couldn't be computed!")
 
     # this function computes the rms(root mean square)
     def calcul_rms(self):
