@@ -99,7 +99,7 @@ class YoutubeScript:
             print("The play button couldn't be found!")
 
     """this function check if there is ads, and if there is, will click on it. Otherwise, a specific message will raise. I used a 'for' to check twice, because sometimes,
-    the ads is displayed twitce"""
+    the ads is displayed twice"""
     def ads(self):
         while not self.test_internet():
             continue
